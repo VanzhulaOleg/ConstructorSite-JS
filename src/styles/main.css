@@ -1,7 +1,12 @@
 #app {
   position: relative;
 }
-
+.row {
+  margin: 0;
+}
+.column {
+  margin: 0;
+}
 .content {
   position: absolute;
   top: 0;
