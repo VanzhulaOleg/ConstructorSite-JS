@@ -1,3 +1,4 @@
+import { model, arrDataColumns } from "../model";
 import { col, row } from "../utils";
 class Block {
   constructor(value, options) {
@@ -16,7 +17,7 @@ export class TitleBlock extends Block {
   }
 
   toHTML() {
-    const { tag, styles } = this.options;
+    const { tag = "h2", styles } = this.options;
     return row(
       col(`
             <${tag}>${this.value}<${tag}>
