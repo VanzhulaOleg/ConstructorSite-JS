@@ -30,8 +30,7 @@ export class Sidebar {
         : type === "title"
         ? TitleBlock
         : TextColumnsBlock;
-
-    const newBlock = new Constructor(value, { styles });
+    const newBlock = new Constructor([value], { styles }, type);
     this.update(newBlock);
 
     event.target.value.value = "";

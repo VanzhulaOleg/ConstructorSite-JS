@@ -28,7 +28,8 @@ export const model = [
     alt: "my image",
   }),
   new TextBlock(text, {
-    styles: "background: darkgrey; color:white; text-align:center; font-size:1.2rem",
+    styles:
+      "background: darkgrey; color:white; text-align:center; font-size:1.2rem",
   }),
 
   new TextColumnsBlock(arrDataColumns, {

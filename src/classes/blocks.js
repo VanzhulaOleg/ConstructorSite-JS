@@ -1,8 +1,9 @@
 import { model, arrDataColumns } from "../model";
 import { col, row } from "../utils";
 class Block {
-  constructor(value, options) {
+  constructor(value, options, type) {
     this.value = value;
+    this.type = type;
     this.options = options;
   }
 
@@ -12,8 +13,8 @@ class Block {
 }
 
 export class TitleBlock extends Block {
-  constructor(value, options) {
-    super(value, options);
+  constructor(value, options, type) {
+    super(value, options, type);
   }
 
   toHTML() {
@@ -28,8 +29,8 @@ export class TitleBlock extends Block {
 }
 
 export class ImageBlock extends Block {
-  constructor(value, options) {
-    super(value, options);
+  constructor(value, options, type) {
+    super(value, options, type);
   }
 
   toHTML() {
@@ -40,8 +41,8 @@ export class ImageBlock extends Block {
 }
 
 export class TextBlock extends Block {
-  constructor(value, options) {
-    super(value, options);
+  constructor(value, options, type) {
+    super(value, options, type);
   }
 
   toHTML() {
@@ -57,8 +58,8 @@ export class TextBlock extends Block {
 }
 
 export class TextColumnsBlock extends Block {
-  constructor(value, options) {
-    super(value, options);
+  constructor(value, options, type) {
+    super(value, options, type);
   }
 
   toHTML() {

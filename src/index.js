@@ -6,13 +6,11 @@ import "./styles/main.css";
 const site = new Site("#site");
 
 const updateCallback = (newBlock) => {
-  newBlock.constructor.name !== "TextColumnsBlock"
+  newBlock.type !== "column"
     ? model.push(newBlock)
     : arrDataColumns.push(newBlock.value);
-
   site.render(model);
 };
-
 new Sidebar("#panel", updateCallback);
 
 site.render(model);
